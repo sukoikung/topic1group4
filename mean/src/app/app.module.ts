@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './shared/services';
+import { TravelComponent } from './travel/travel.component';
 
 export function appInitializerFactory(authService: AuthService) {
   return () => authService.checkTheUserOnTheFirstLoad();
@@ -19,7 +20,7 @@ export function appInitializerFactory(authService: AuthService) {
 
 @NgModule({
   imports: [BrowserAnimationsModule, HttpClientModule, SharedModule, AppRoutingModule],
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent,TravelComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
