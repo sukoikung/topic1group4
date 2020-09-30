@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './shared/guards';
 import { HomeComponent } from './home/home.component';
 import { TravelComponent } from './travel/travel.component';
+import { CreatePostsComponent } from './create-posts/create-posts.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'travel',
     component: TravelComponent,
+  },
+  {
+    path: 'create-posts',
+    component: CreatePostsComponent,
   },
 ];
 
