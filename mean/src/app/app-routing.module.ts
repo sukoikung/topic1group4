@@ -3,10 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AuthGuard } from './shared/guards';
 import { HomeComponent } from './home/home.component';
-import { DescriptionComponent } from './description/description.component';
-import { AllPlaceComponent } from './all-place/all-place.component';
 import { PopularPlaceComponent } from './popular-place/popular-place.component';
 import { PlaceComponent } from './place/place.component';
+import { PostComponent } from './post/post.component';
+import { CreatepostComponent } from './createpost/createpost.component';
+import { TravelComponent } from './travel/travel.component';
+import { MytravelComponent } from './mytravel/mytravel.component';
+import { TraveldetailComponent } from './traveldetail/traveldetail.component';
 
 const routes: Routes = [
   {
@@ -15,20 +18,32 @@ const routes: Routes = [
     //canActivate: [AuthGuard],
   },
   {
-    path: 'description/:dataObj',
-    component: DescriptionComponent,
-  },
-  {
-    path: 'province/:dataObj',
-    component: AllPlaceComponent,
-  },
-  {
     path: 'popular',
     component: PopularPlaceComponent,
   },
   {
-    path: 'travel',
+    path: 'place',
     component: PlaceComponent,
+  },
+  {
+    path: 'post',
+    component: PostComponent,
+  },
+  {
+    path: 'createpost',
+    component: CreatepostComponent,
+  },
+  {
+    path: 'travel',
+    component: TravelComponent,
+  },
+  {
+    path: 'mytravel',
+    component: MytravelComponent,
+  },
+  {
+    path: 'traveldetail',
+    component: TraveldetailComponent,
   },
   {
     path: 'auth',

@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable, BehaviorSubject, EMPTY } from 'rxjs';
-import { tap, pluck } from 'rxjs/operators';
+import { tap, pluck,map } from 'rxjs/operators';
 
-import { User } from '@app/shared/interfaces';
+import { User, Post } from '@app/shared/interfaces';
 
 import { TokenStorage } from './token.storage';
 
@@ -29,6 +29,31 @@ export class AuthService {
         }),
         pluck('user')
       );
+  }
+
+  posttravel(title: string, detail: string, imageTitle: string, uid: string): Observable<Post>{
+    return this.http.post('/api/posttravel/create', { title, detail, imageTitle, uid}).pipe(tap(() => {}),pluck('post'));
+  }
+
+
+  delhistory(_id: string){
+    return this.http
+    .get('/api/posttravel/'+_id).pipe(
+      map(res => res)
+    )
+  }
+
+  getposttravel(){
+    return this.http.get('/api/posttravel/all').pipe(
+      map(res => res)
+    );
+  }
+
+  gettravel(id: string){
+    // console.log(id);
+    return this.http.get('/api/posttravel/get/'+ id).pipe(
+      map(res => res)
+    );
   }
 
   register(

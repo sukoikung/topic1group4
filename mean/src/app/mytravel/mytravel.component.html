@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<header class="bg-secondary">
+  <mat-toolbar class="bg-secondary">
+    <button type="button" class="btn btn-primary" routerLink='/createpost'>เพิ่มรีวิวใหม่</button>
+    <span class="example-spacer"></span>
+    <div>
+      <form class="form-inline ml-auto">
+      </form>
+    </div>
+  </mat-toolbar>
+</header>
+
+<div class="body">
+    <div class="img"><br>
+        
+    </div>
+
+    <div class="recommend">
+        <p>รีวิวของฉัน</p>
+    </div>
+    <div class="row" style="margin: 10px;">
+        <div class="col-sm-3" *ngFor="let travel of travelall; index as i; first as isFirst" style="margin: 10px 0px;">
+            <div *ngIf="uid_ == travel.uid">
+                <a routerLink="/traveledit/{{travel._id}}" placement="bottom">
+                    <div class="card" >
+                        <img class="card-img-top" src="./assets/images/{{travel.imageTitle}}" alt="Card image cap" style="height: 35rem;">
+                        <div class="card-body" style="height: 10rem;">
+                            <h4 class="card-title cut-text"><b>{{travel.title}}</b></h4>
+                            <p class="card-text cut-text-multi">&nbsp;&nbsp;&nbsp;&nbsp;{{travel.detail}}</p>
+                        </div>
+                        
+                    </div>
+                </a>
+                <div style="margin-top: 0px; margin-right: 0px;">
+                <button type="button" class="btn btn-danger" (click)="onDelete(travel._id)">ลบ</button>
+                </div>
+            <div >
+        </div>
+    </div>
+</div>
