@@ -1,6 +1,10 @@
-<header>
+<!-- <header>
   <mat-toolbar color="primary">
     <a routerLink="/" class="logo"></a>
+    <span class="spacer"></span>
+    <a routerLink="/description" >description</a>
+    <span class="spacer"></span>
+    <a routerLink="/review" >review</a>
     <span class="example-spacer"></span>
     <a class="links side" routerLink="/auth/login" *ngIf="!user">Login</a>
     <div>
@@ -13,4 +17,69 @@
       </mat-menu>
     </div>
   </mat-toolbar>
+</header> -->
+
+<header>
+  <div class="header-area ">
+    <div id="sticky-header" class="main-header-area sticky">
+      <div class="container-fluid">
+        <div class="header_bottom_border">
+          <div class="row align-items-center">
+            <div class="col-xl-2 col-lg-2">
+              <div class="logo">
+                <a href="/">
+                  <img src="../../assets/img/logo.png" alt="" height="50" width="200">
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+              <div class="main-menu  d-none d-lg-block">
+                <nav>
+                  <ul id="navigation">
+                    <li><a class="active" href="/">หน้าหลัก</a></li>
+                    <li><a href="/travel">รีวิวสถานที่ท่องเที่ยว</a></li>
+                    <li><a class="" href="/popular">สถานที่ท่องเที่ยวที่น่าสนใจ</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+              <div class="social_wrap d-flex align-items-center justify-content-end">
+                <div class="number">
+                  <a style="color: gray;" class="links side" routerLink="/auth/login" *ngIf="!user">Login</a>
+                  <div>
+                    <a class="links side" *ngIf="user" [matMenuTriggerFor]="menu" style="color: black;">
+                      <mat-icon>account_circle</mat-icon>{{ user.fullname }}
+                    </a>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item *ngIf="user?.isAdmin" routerLink="/admin">admin</button>
+                      <button mat-menu-item (click)="logout()">logout</button>
+                    </mat-menu>
+                  </div>
+                  <!-- <p> <i class="fa fa-phone"></i> 10(256)-928 256</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="mobile_menu d-block d-lg-none">
+                <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0"
+                    class="slicknav_btn slicknav_collapsed" style="outline: none;"><span
+                      class="slicknav_menutxt">MENU</span><span class="slicknav_icon">
+                    </span></a>
+                  <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+                    <li><a class="active" href="/" role="menuitem" tabindex="-1">หน้าหลัก</a></li>
+                    <li><a href="/travel" role="menuitem" tabindex="-1">รีวิวสถานที่ท่องเที่ยว</a></li>
+                    <li><a class="" href="/popular" role="menuitem" tabindex="-1">สถานที่ท่องเที่ยวที่น่าสนใจ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </header>

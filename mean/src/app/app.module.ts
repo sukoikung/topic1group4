@@ -12,8 +12,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './shared/services';
-import { TravelComponent } from './travel/travel.component';
-import { CreatePostsComponent } from './create-posts/create-posts.component';
+import { HeroComponent } from './hero/hero.component';
+import { DescriptionComponent } from './description/description.component';
+import { AllPlaceComponent } from './all-place/all-place.component';
+import { PlaceComponent } from './place/place.component';
+import { FooterComponent } from './footer/footer.component';
+import { PopularPlaceComponent } from './popular-place/popular-place.component';
+import { BaseHtmlComponent } from './base-html/base-html.component';
 
 export function appInitializerFactory(authService: AuthService) {
   return () => authService.checkTheUserOnTheFirstLoad();
@@ -21,7 +26,7 @@ export function appInitializerFactory(authService: AuthService) {
 
 @NgModule({
   imports: [BrowserAnimationsModule, HttpClientModule, SharedModule, AppRoutingModule],
-  declarations: [AppComponent, HeaderComponent, HomeComponent,TravelComponent, CreatePostsComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, HeroComponent, DescriptionComponent, AllPlaceComponent, PlaceComponent, FooterComponent, PopularPlaceComponent, BaseHtmlComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

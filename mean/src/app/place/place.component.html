@@ -1,0 +1,33 @@
+<app-base-html></app-base-html>
+
+<!-- popular_destination_area_start  -->
+<div class="popular_destination_area">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section_title text-center mb_70">
+          <h3>รีวิวสถานที่ท่องเที่ยว</h3>
+          <p> ในบ้านเรามีที่เที่ยวเยอะแยะแบบที่ไปกันได้ทั้งปีทุกวี่ทุกวันก็ยังไม่มีหมด นี่ยังไม่นับรวมแหล่งท่องเที่ยวใหม่ๆ ที่ผุดกันขึ้นมาเรื่อยๆ เรียกได้ว่าประเทศไทยของเรานั้นแทบจะเป็นสวรรค์ของนักท่องเที่ยวกันเลย ว่าแล้วมาดู 50 ที่เที่ยว สวยที่สุดในไทย ชาตินี้ต้องไปสักครั้ง ! ที่เรา Recommend มาแล้วเช็คลิสต์ดูว่าไปเช็คอินกันมาแล้วกี่ที่ !</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6" *ngFor="let item of place; let i = index;">
+        <!-- <p>{{ i+1 }}</p> -->
+        <a (click)="goto(i)">
+          <div class="single_destination">
+            <div class="thumb">
+              <img src="{{item.img}}" alt="">
+            </div>
+            <div class="content">
+              <p class class="d-flex align-items-center">{{item.name}} <a> {{item.totalPlace}} Places</a> </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- popular_destination_area_end  -->
+
+<app-footer></app-footer>

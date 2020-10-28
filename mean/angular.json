@@ -21,6 +21,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -71,6 +72,7 @@
             "tsConfig": "./tsconfig.spec.json",
             "scripts": [],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "assets": [
@@ -105,6 +107,6 @@
     }
   },
   "cli": {
-    "analytics": "908774cc-36d4-4b5d-a20b-eaaf8d60d0d3"
+    "analytics": "92cdcfd8-14db-4350-be94-9427dedaddcf"
   }
 }
