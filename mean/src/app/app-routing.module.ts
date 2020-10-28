@@ -42,7 +42,7 @@ const routes: Routes = [
     component: MytravelComponent,
   },
   {
-    path: 'traveldetail',
+    path: 'traveldetail/:id',
     component: TraveldetailComponent,
   },
   {

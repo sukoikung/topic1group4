@@ -7,15 +7,18 @@
     
     <div class="img"><br>
         <div class="row">
+            <div class="col-3">
+                <img class="card-img-top" src="./assets/images/{{travel.imageTitle}}" alt="Card image cap" style="height: 45rem;  margin: 0px 20px;">
+            </div>
         </div>
     </div>
     <div class="list-group" style="margin: 30px 0px;">
         <a class="list-group-item list-group-item-action active head">
                 <b>รีวิวทั้งหมด</b>
         </a>
-        <div *ngFor="let epn of ep; index as i; first as isFirst">
-            <div *ngIf="travel._id == epn.titleid">
-                <a routerLink="/traveldetail/{{epn._id}}" class="list-group-item list-group-item-action">ตอนที่ {{epn.ep}} : {{epn.titleep}}</a>
+        <div *ngFor="let tvn of tv; index as i; first as isFirst">
+            <div *ngIf="travel._id == tvn.titleid">
+                <a routerLink="/traveldetail/{{tvn._id}}" class="list-group-item list-group-item-action">ตอนที่ {{tvn.tv}} : {{tvn.titletv}}</a>
             </div>
         </div>
     </div>
