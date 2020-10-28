@@ -125,7 +125,6 @@ export class DescriptionComponent implements OnInit {
     // console.log('a parse =', JSON.parse(a));
     // this.placeService
     // .postReviews(b)
-    // .subscribe(hero => this.c.push(hero));
     // this.placeService.postReviews(b).subscribe((response: {}) =>
     //   alert('บันทึกเรียบร้อย'),
     // );

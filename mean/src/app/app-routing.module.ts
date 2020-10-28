@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AuthGuard } from './shared/guards';
 import { HomeComponent } from './home/home.component';
-import { HeroComponent } from './hero/hero.component';
 import { DescriptionComponent } from './description/description.component';
 import { AllPlaceComponent } from './all-place/all-place.component';
 import { PopularPlaceComponent } from './popular-place/popular-place.component';

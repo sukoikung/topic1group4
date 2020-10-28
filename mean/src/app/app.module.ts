@@ -12,7 +12,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './shared/services';
-import { HeroComponent } from './hero/hero.component';
 import { DescriptionComponent } from './description/description.component';
 import { AllPlaceComponent } from './all-place/all-place.component';
 import { PlaceComponent } from './place/place.component';
@@ -26,7 +25,7 @@ export function appInitializerFactory(authService: AuthService) {
 
 @NgModule({
   imports: [BrowserAnimationsModule, HttpClientModule, SharedModule, AppRoutingModule],
-  declarations: [AppComponent, HeaderComponent, HomeComponent, HeroComponent, DescriptionComponent, AllPlaceComponent, PlaceComponent, FooterComponent, PopularPlaceComponent, BaseHtmlComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, DescriptionComponent, AllPlaceComponent, PlaceComponent, FooterComponent, PopularPlaceComponent, BaseHtmlComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
